@@ -1,0 +1,92 @@
+<link rel="stylesheet" type="text/css" href="css/ipoProfile.css">
+
+<div class="col-md-6 offset-md-3 jumbotron">
+    <div class="row">
+        <div class="col-md-12 text-center">
+                <img class="rounded-circle profile-image" src="images/buzz.png" alt="Ipo image">
+                <h1>{{name.name}}</h1>
+                <h4>Suggested Price: <span style="color: green">{{priceInfo.suggested_price}}</span></h4>
+                <h4>Callable Price: <span style="color: purple">{{priceInfo.callable_price}}</span></h4>
+        </div>
+    </div>
+    <div class="row navigation-bar">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" ng-click="showPersonalInfo()">Personal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" ng-click="showIpoInfo()">IPO</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 my-auto text-center">
+            <span ng-click="prevPage()" class="glyphicon glyphicon-chevron-left" id="chevronLeft"></span>
+        </div> 
+        <div class="col-md-8" id="pInfo">
+            <div class="row">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Title</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="x in keys">
+                            <th scope="row">{{x}}</th>
+                            <td>{{profileInfo[x]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-8" id="iInfo">
+            <div class="row">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Title</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="j in keys">
+                            <th scope="row">{{j}}</th>
+                            <td>{{ipoInfo[j]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-2 my-auto text-center">
+            <span ng-click="nextPage()" class="glyphicon glyphicon-chevron-right" id="chevronRight"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+                <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-action text-center">
+                                <button ng-click="postBid()" class="btn btn-primary">Bid</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input id="numShares" type="number" name="shares" class="form-control" ng-model="shares" placeholder="#Shares" required/>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input id="bidPrice" type="number" name="price" class="form-control" ng-model="price" placeholder="Bid Price" required/>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>

@@ -1,0 +1,109 @@
+<link rel="stylesheet" type="text/css" href="css/issuer.css">
+<link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css">
+
+<div class="col-md-10 offset-md-1 jumbotron">
+<div class="row">
+    <div class="col-md-3 offset-md-1">
+            <img class="card-img-top card-image" src="images/buzz.png" style="background-color: darkslategrey;" />
+            <div class="card-header" style="background-color: #C3A75B">
+                <span>
+                    <a href="#" class="fa fa-facebook"></a> 
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </span>
+            </div>
+            <div class="card-body" style="background-color: white">
+                <h2 class="text-center">{{name}}</h2>
+            </div> 
+            <div class="card-body" style="background-color: grey">
+                <h4 class="text-center">{{curr_occupation}}</h4>
+            </div>
+
+                    <div class="col-md-12 card" style="margin-bottom: 0.5rem;background-color: black;">
+                        <div class="row" style=" margin: 10px;">
+                            <div class="col-md-12 card">
+                                    <div class="card-header text-center" style="margin: 10px;"><h6>Recommended IPO Price</h6></div>
+                                    <table class="table table-striped">
+                                        <thead>
+                                                <th>Share Price</th><th>Call Price</th>
+                                        </thead>
+                                        <tbody>
+                                        <tr><td ng-init="share_price=0">{{share_price}}</td><td ng-init="call=0">{{call}}</td></tr>    
+                                        </tbody>
+                                    </table>
+                            </div>
+                        </div>
+                    </div>
+    </div>
+    
+    <div class="col-md-5 offset-md-1">
+        <div class="row">
+                <div class="col-md-12">
+                        <table class="table table-striped">
+                                <tbody>
+                                    <tr><th>Age</th><td>{{age}}</td><th>Gender</th><td>{{gender}}</td></tr>
+                                    <tr><th>Education Level</th><td>{{education_level}}</td><th>Current Occupation</th><td>{{curr_occupation}}</td></tr>
+                                    <tr><th>Intended Occupation</th><td>{{int_occupation}}</td><th>Marital status</th><td>{{marital_status}}</td></tr>
+                                    <tr><th>Income for past year</th><td>{{income}}</td><th>No of kids</th><td>{{no_of_kids}}</td></tr>
+                                    </tbody>
+                            </table>
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-md-12 card" style="margin-bottom: 0.5rem;">
+                        <form ng-submit="submitFunc()" style="margin: 20px;" name="IPO_Form">
+                                <div class="form-group">
+                                    <input type="text" name="ccpercentage" class="form-control" ng-model="ccpercentage" placeholder="Credit Card Charge Percentage" />
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="number" name="shares" class="form-control" ng-model="shares" placeholder="Shares Offering" />
+                                        <span class="input-group-text">-</span>
+                                        <input type="number" name="lot" class="form-control" ng-model="lot" placeholder="Market Lot" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                        <input type="number" name="minOrder" class="form-control" ng-model="minOrder" placeholder="Minimum order quantity" />
+                                        
+                                </div>
+                                <div class="form-group">
+                                        <input type="text" name="execute_date" class="form-control" ng-model="execute_date" placeholder="Execution date: YYYY-MM-DD" />
+                                </div>
+                                <div class="form-group">
+                                        <span class="select_placeholder">Callable <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="Allows the issuer the option to call(buyback) shares at given price 10 years from IPO date."> :</span> </span>
+                                        <label class="radio-inline"><input type="radio" name="call_option" value=0 checked><span class="select_placeholder"> None</span></label>
+                                        <label class="radio-inline"><input type="radio" name="call_option" value=3><span class="select_placeholder"> High</span></label>
+                                        <label class="radio-inline"><input type="radio" name="call_option" value=2><span class="select_placeholder"> Low</span></label>
+                                </div>
+                                <!--<div class="form-group">
+                                        <span class="select_placeholder">Redeemable <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="Put explanation"> :</span> </span>
+                                        <label class="radio-inline"><input type="radio" name="put_option" value=0 checked><span class="select_placeholder"> None</span></label>
+                                        <label class="radio-inline"><input type="radio" name="put_option" value=1><span class="select_placeholder"> High</span></label>
+                                        <label class="radio-inline"><input type="radio" name="put_option" value=2><span class="select_placeholder"> Medium</span></label>
+                                        <label class="radio-inline"><input type="radio" name="put_option" value=3><span class="select_placeholder"> Low</span></label>
+                                </div>-->
+                                <div class="form-action">
+                                    <button type="submit" class="btn btn-secondary">Submit IPO Details</button>
+                                </div>
+                        </form>
+                </div>
+        </div>
+        <div class="row">
+        <div class="col-md-12 card" style="margin-bottom: 0.5rem;">
+            <div class="row" style=" margin: 10px;">
+                    <form ng-submit="min_Price()">
+                            <div class="form-group">
+                                <input type="number" name="minPrice" class="form-control" ng-model="minPrice" placeholder="Minimum price" /> 
+                            </div>
+                            <div class="form-action">
+                                <button type="submit" class="btn btn-secondary" data-toggle="tooltip" title="Use the recommended price to evaluate minimum price.Please submit your IPO details to see recommended prices.">Submit Minimum Price</button> 
+                            </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</div>

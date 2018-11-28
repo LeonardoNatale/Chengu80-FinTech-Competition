@@ -1,0 +1,157 @@
+
+<div class="col-md-8 offset-md-2 jumbotron">
+	<div class="row">
+		<div class="col-md-8 offset-md-2 card heading">
+            <h3 class="text-center">Register IPO</h3>
+            <small class="text-muted text-center">*All fields are required</small>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-10 offset-md-1">
+			<form ng-submit="submitFunc()" name="Issuer_Form">
+                <div class="form-group">
+                <div class="input-group">
+					
+					<input type="text" name="firstName" class="form-control" ng-model="firstName" placeholder="First Name" required/>
+                    <span class="input-group-text">-</span>
+					<input type="text" name="lastName" class="form-control" ng-model="lastName" placeholder="Last Name" required/>
+                </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" name="age" class="form-control" ng-model="age" placeholder="Age" required/>
+                    <span class="input-group-text">-</span>
+                    <select class="form-control select_placeholder" id="gender" ng-model="gender" ng-required="false">
+                        <option value="" class="select_placeholder">Gender</option>
+                        <option value=1>Male</option>
+                        <option value=2>Female</option>
+                    </select>
+                    <span class="input-group-text">-</span>
+                    <select class="form-control select_placeholder" id="marital_status" ng-model="marital_status" ng-required="false">
+                        <option value="">Marital Status</option>
+                        <option value=1>Married</option>
+                        <option value=2>Widowed</option>
+                        <option value=3>Divorced</option>
+                        <option value=4>Separated</option>
+                        <option value=5>Single</option>
+                    </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                        <div class="input-group">
+                        <select class="form-control select_placeholder" id="education_level" ng-model="education_level" ng-required="false">
+                                <option value="">Education Level</option>
+                                <option value=0>Never Attended School</option>
+                                <option value=10>1 to 8 Grade</option>
+                                <option value=11>9 to 12 Grade (no H.S. diploma)</option>
+                                <option value=12>High School Graduate</option>
+                                <option value=13>Some college, less than college graduate</option>
+                                <option value=14>Associate's degree (occupational/vocational or academic)</option>
+                                <option value=15>Bachelor's degree</option>
+                                <option value=16>Master's degree, (professional/Doctorate degree)</option>
+                        </select>
+                        <span class="input-group-text">-</span>
+                        <select class="form-control select_placeholder" id="occupation" ng-model="occupation" ng-required="false">
+                                <option value="">Present Occupation</option>
+                                <option value=1>Administrator, manager</option>
+                                <option value=2>Teacher</option>
+                                <option value=3>Professional</option>
+                                <option value=4>Administrative support, including clerical</option>
+                                <option value=5>Sales, retail</option>
+                                <option value=6>Sales, business goods and services</option>
+                                <option value=7>Technician</option>
+                                <option value=8>Protective service</option>
+                                <option value=9>Private household service</option>
+                                <option value=10>Other service</option>
+                                <option value=11>Machine operator, assembler, inspector</option>
+                                <option value=12>Transportation operator</option>
+                                <option value=13>Handler, helper, laborer</option>
+                                <option value=14>Mechanic, repairer, precision production</option>
+                                <option value=15>Construction, mining</option>
+                        </select>
+                        <span class="input-group-text">-</span>
+                        <select class="form-control select_placeholder" id="house_tenure" ng-model="house_tenure" ng-required="false">
+                                <option value="">House Tenure</option>
+                                <option value=1>Owned with mortgage</option>
+                                <option value=2>Owned without mortgage</option>
+                                <option value=4>Rented</option>
+                                <option value=5>Occupied without payment of cash rent</option>
+                                <option value=6>Student housing</option>
+                            </select>
+                        </div>
+                    </div>
+
+				<div class="form-group">
+                    <div class="input-group">
+                        <input type="email" name="email" class="form-control" ng-model="email" placeholder="Email" required/>
+                        <span class="input-group-text">-</span>
+                        <input type="text" name="username" class="form-control" ng-model="username" placeholder="Username" required/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                        <div class="input-group">
+                            <input type="password" name="password" class="form-control" ng-model="password" placeholder="Password" required/>
+                            <span class="input-group-text">-</span>
+                            <input type="password" name="confPassword" class="form-control" ng-model="confPassword" placeholder="Confirm Password" ng-blur="passwordMatch()" required/>
+                        </div>
+                </div>
+
+                <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" name="no_of_kids" class="form-control" ng-model="no_of_kids" placeholder="Number of kids" required/>
+                            <span class="input-group-text">-</span>
+                            <input type="text" name="income" class="form-control" ng-model="income" placeholder="Income in the past two months" required/>
+                        </div>
+                </div>
+
+                <div class="col-md-12  card" style="margin-bottom: 0.5rem;">
+                        <div class="form-group">
+                                <label class="select_placeholder"> Do you intend to pursue higher education?</label>
+                                <label class="radio-inline"><input type="radio" name="q1" value=1 ng-model="q1" checked><span class="select_placeholder"> Yes</span></label>
+                                <label class="radio-inline"><input type="radio" name="q1" value=0 ng-model="q1"><span class="select_placeholder"> No</span></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="select_placeholder"> Intended Education Level?</label>
+                                <label class="radio-inline"><input type="radio" name="q2" value=2 ng-model="q2" checked><span class="select_placeholder"> Graduate</span></label>
+                                <label class="radio-inline"><input type="radio" name="q2" value=1 ng-model="q2"><span class="select_placeholder"> Undergraduate</span></label>
+                                <label class="radio-inline"><input type="radio" name="q2" value=0 ng-model="q2"><span class="select_placeholder"> NA</span></label>
+                            </div>
+                            <div class="form-group">
+                                    <select class="form-control select_placeholder" id="int_occupation" ng-model="int_occupation" ng-required="false">
+                                            <option value="">Occupation</option>
+                                            <option value=1>Administrator, manager</option>
+                                            <option value=2>Teacher</option>
+                                            <option value=3>Professional</option>
+                                            <option value=4>Administrative support, including clerical</option>
+                                            <option value=5>Sales, retail</option>
+                                            <option value=6>Sales, business goods and services</option>
+                                            <option value=7>Technician</option>
+                                            <option value=8>Protective service</option>
+                                            <option value=9>Private household service</option>
+                                            <option value=10>Other service</option>
+                                            <option value=11>Machine operator, assembler, inspector</option>
+                                            <option value=12>Transportation operator</option>
+                                            <option value=13>Handler, helper, laborer</option>
+                                            <option value=14>Mechanic, repairer, precision production</option>
+                                            <option value=15>Construction, mining</option>
+                                    </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="gradyear" class="form-control" ng-model="gradyear" placeholder="Estimated Graduation Year"/>
+                            </div>
+                </div>
+				
+				<div class="form-action">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                    <a href="#!issuer">Next</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<!-- age,marital_status,sex,number_of_kids,occupation,education_level,house_tenure,income_past12months,avg_credit_card_spending_semi_annual -->

@@ -1,0 +1,27 @@
+.pannel-tittle{
+	margin-bottom: 0.005em;
+}
+
+.center-block {
+   margin-left:auto;
+   margin-right:auto;
+   display:block;
+}
+
+.text-center {
+   text-align:center
+}
+
+.col {
+  margin: 3.5%;
+}
+
+.card-image {
+	width: 60%;
+	height: 60%;
+	align-self: center;
+}
+
+.glyphicon.glyphicon-chevron-right, .glyphicon.glyphicon-chevron-left{
+  font-size: 4em;
+}

@@ -1,0 +1,45 @@
+
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<div class="col-md-6 offset-md-3 jumbotron">
+	<div class="row">
+		<div class="col-md-8 offset-md-2">
+			<h1 style="color:darkslategrey;">Welcome to BuyBob!</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 left-side-content">
+			<h3 style="padding-left: 10px;color:darkslategrey;">Login</h3>
+			<form ng-submit="submitFunc()">
+				<div class="form-group">
+					<input type="text" name="username" class="form-control" ng-model="username" placeholder="Username" />
+				</div>
+				<div class="form-group">
+					<input type="password" name="password" class="form-control" ng-model="password" placeholder="Password" />
+				</div>
+				<a href="#" style="padding-left: 10px;"><small>Forgot your password?</small></a>
+				<div class="form-action">
+					<button type="submit" class="btn btn-primary" style="background-color:rgba(238, 178, 17, 0.75);">Login</button>
+				</div>
+			</form>
+		</div>
+		<div class="col-md-6">
+
+			<div class="row">
+				<div class="col-md-8 offset-md-2 right-side-content" style="padding-top: 0em;">
+					<h3 style="padding-left: 10px;color:darkslategrey;">Register</h3>
+					<div class="form-group">
+					<div class="row">
+						<button type="button" id="registerInvestorButton" class="btn btn-primary btn-block" style="background-color:rgba(238, 178, 17, 0.75);">Investor</button>
+					</div>
+					</div>
+					<div class="form-group">
+					<div class="row">
+						<button type="button" id="registerIssuerButton" class="btn btn-primary btn-block" style="background-color:rgba(238, 178, 17, 0.75);">Issuer</button>
+					</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

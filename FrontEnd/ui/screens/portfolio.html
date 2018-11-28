@@ -1,0 +1,43 @@
+
+<div class="col-md-8 offset-2 jumbotron" ng-app="portfolio" ng-controller="pCntrl">
+	<h1>Your Portfolio</h1>
+	<div class="card" style="width: 53rem; margin-bottom: 10px; margin-left: 10px;">
+	<div class="card-header"><h4> Holdings </h4></div>
+	</div>
+	<div class="card" style="width: 53rem; margin-bottom: 10px; margin-left: 10px;">
+	<table class="table table-striped">
+		<thead>
+			<th>Asset</th>
+			<th>Cost basis</th>
+			<th>Shares held</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="x in holdings">
+			<td>{{x.name}}</td>
+			<td>{{x.price}}</td>
+			<td>{{x.amount}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="card" style="width: 53rem; margin-bottom: 10px; margin-left: 10px;">
+		<div class="card-header"><h4> Bids </h4></div>
+		</div>
+		<div class="card" style="width: 53rem; margin-bottom: 10px; margin-left: 10px;">
+		<table class="table table-striped">
+			<thead>
+				<th>Bids</th>
+				<th>Cost basis</th>
+				<th>Shares held</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="x in bids">
+				<td>{{x.name}}</td>
+				<td>{{x.price}}</td>
+				<td>{{x.amount}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,24 @@
+
+.left-side-content{
+	border-right: 1px solid #333;
+}
+
+.right-side-content{
+	padding-top: 5em;
+}
+
+.top-separator {
+	padding-top: 1em;
+}
+
+.btn {
+	background-color: #eeb211;
+	border-color: #eeb211;
+	float: right;
+}
+
+.btn:focus, .btn-primary:focus {
+
+    box-shadow: 0 0 0 .2rem #eeb211;
+
+}

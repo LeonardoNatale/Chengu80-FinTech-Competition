@@ -1,0 +1,71 @@
+html{
+	height:100%;
+}
+
+body{
+	height:100%;
+	margin:0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background: rgb(2,0,36);
+	background: linear-gradient(37deg, rgb(240, 65, 8) 0%, rgb(188, 58, 7) 0%, rgb(198, 154, 0) 79%)
+}
+
+.logo {
+	animation: App-logo-spin infinite 10s linear;
+	height: 8vmin;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+a {
+	color: darkcyan;
+}
+
+.mainnav {
+	background-color: rgb(0,0,0, 0.75);
+	padding: 1%;
+	margin-bottom: 1rem;
+}
+
+.mainnav a{
+	color: #EEB211;
+}
+
+.mainfooter {
+	background-color: rgb(0,0,0, 0.75);
+}
+
+.mainfooter p{
+	color: #EEB211;
+	margin: 3%;
+}
+
+.copyright{
+	text-align: right;
+	color: #EEB211;
+}
+
+.jumbotron{
+	padding: 2rem 1rem;
+	background-color: rgba(233,236,239,0.7);
+}
+
+.select_placeholder{
+	color:rgba(73, 80, 87, 0.8);
+}
+
+.text-center {
+	text-align:center
+ }
+
+ .heading {
+	margin-bottom: 20px;
+ }

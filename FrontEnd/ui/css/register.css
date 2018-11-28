@@ -1,0 +1,17 @@
+.jumbotron{
+	padding: 2rem 1rem;
+	background-color: rgba(233,236,239,0.7);
+	top: 200px;
+}
+
+.btn {
+	background-color: #eeb211;
+	border-color: #eeb211;
+	float: right;
+}
+
+.btn:focus, .btn-primary:focus {
+
+    box-shadow: 0 0 0 .2rem #eeb211;
+
+}

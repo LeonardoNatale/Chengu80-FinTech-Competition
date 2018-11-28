@@ -1,0 +1,36 @@
+
+<div class="col-md-4 offset-md-4 jumbotron">
+	<div class="row">
+		<div class="col-md-6 offset-md-3 card heading">
+			<h3 class="text-center">Register</h3>
+			<small class="text-muted text-center">*All fields are required</small>
+		</div>	
+	</div>
+	<div class="row">
+		<div class="col-md-8 offset-md-2 left-side-content">
+			<form ng-submit="submitFunc()" name="Investor_Form">
+				<div class="form-group">
+					<input type="text" name="firstName" class="form-control" ng-model="firstName" placeholder="First Name" required/>
+				</div>
+				<div class="form-group">
+					<input type="text" name="lastName" class="form-control" ng-model="lastName" placeholder="Last Name" required/>
+				</div>
+				<div class="form-group">
+					<input type="email" name="email" class="form-control" ng-model="email" placeholder="Email" required/>
+				</div>
+				<div class="form-group">
+					<input type="text" name="username" class="form-control" ng-model="username" placeholder="Username" required/>
+				</div>
+				<div class="form-group">
+					<input type="password" name="password" class="form-control" ng-model="password" placeholder="Password" required/>
+				</div>
+				<div class="form-group">
+					<input type="password" name="confPassword" class="form-control" ng-model="confPassword" placeholder="Confirm Password" ng-blur="passwordMatch()" required/>
+				</div>
+				<div class="form-action">
+					<button type="submit" class="btn btn-primary">Register</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

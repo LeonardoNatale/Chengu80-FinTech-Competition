@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<title>Personal IPO</title>
+
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/glyphicons-only-bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
+	<script type="text/javascript" src="node_modules/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="js/utils.js"></script>
+	<script type="text/javascript" src="node_modules/jsonq/jsonQ.min.js"></script>
+	<script type="text/javascript" src="js/factorMap.js"></script>
+	<script type="text/javascript" src="controller/app.js"></script>
+	
+</head>
+
+<body>
+
+<div id="parent" class="container-fluid" ng-app="mainApp">
+	
+	<div class="row mainnav">
+		<div class="col-md-3"><a href="#!login">
+			<img src="images/logo.svg" class="logo"/>
+			<span style="font-weight: bolder">BuyBob.com</span></a></div>
+		<div class="col-md-1 my-auto text-center only-investor" ><a href="#!portfolio" >Portfolio</a></div>
+		<div class="col-md-1 my-auto text-center only-investor" ><a href="#!invest" >Invest</a></div>
+		<div class="col-md-2 copyright my-auto text-center only-investor" ><a href="#!execute_ipo" >Execute(Demo only)</a></div>
+		<div class="col-md-5 my-auto text-center copyright">
+			<a href="#" onclick=load()>Log out</a>
+		</div>
+		
+	</div>
+	<div class="row" ng-view></div>
+	
+	<div id="mfooter" class="row mainfooter fixed-bottom">
+		<div class="col-md-4">
+		<ul>
+			<img src="images/GTlogo2.png" width="32%" style="margin-top: 3%;">
+		</ul>
+		</div>
+		<div class="col-md-8 copyright">
+			<p>Copyright <span class="glyphicon glyphicon-copyright-mark"></span> 2018 BuyBob.com</p>
+		</div>
+	</div> 	
+
+</div>
+</body>
+</html>

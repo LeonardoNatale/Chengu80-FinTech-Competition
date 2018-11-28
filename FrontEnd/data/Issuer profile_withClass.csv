@@ -1,0 +1,11 @@
+issuer id,age,marital_status,sex,number_of_kids,major,house_tenure,occupation,income_past12months,education_level,edu_level,class
+P100001,29 ,Never married,Female,0,Marketing,Owned with mortgage,Manager,"$84,300 ",Bachelor's degree,15.00 ,3
+P100002,29 ,Never married,Male,0,Computer Science,Owned with mortgage,Technician,"$107,600 ",Bachelor's degree,15,0
+P100003,22 ,Never married,Female,0,Electrical and Electronic Engineering,Student housing,Student,$0 ,"Some college, less than college graduate",13,6
+P100004,31 ,Married,Male,1,Surface Science,Owned with mortgage,Professional,"$119,200 ",Doctorate degree,16,5
+P100005,23 ,Never married,Female,0,,Rented,Other service,"$21,000 ",Ninth through twelfth grade (no H.S. diploma),11,7
+P100006,23 ,Never married,Male,0,Complex Systems Modelling,Rented,Student,$0 ,Master's degree candidate,16,0
+P100007,21 ,Never married,Male,0,Finance,Student housing,Student,$0 ,Undergraduate,13,0
+P100008,17 ,Never married,Female,0,International Economics and Trade,Student housing,Student,$0 ,Undergraduate,13,6
+P100009,25 ,Married,Female,0,Information Management,Student housing,Student,"$3,000 ",PhD candidate,16,3
+P100010,29 ,Married,Male,1,Biology,Student housing,Student,"$4,500 ",PhD candidate,16,5

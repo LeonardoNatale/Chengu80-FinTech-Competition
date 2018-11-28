@@ -1,0 +1,57 @@
+
+<!--<div class="col-md-8 offset-2 jumbotron" ng-controller="iCntrl">
+        
+        <div class="card" style="width: 53rem; margin-bottom: 10px; margin-left: 10px;">
+            <div class="card-header"><h2> IPOs at a Glance </h2></div>
+        </div>
+        <div class="card" style="width: 15rem; margin-bottom: 10px; margin-left: 10px; float: left;" ng-repeat="x in profiles">
+        <div class="card-header bg-warning"><h4> {{x.name}} </h4></div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{x.occupation}} <span><button type="button" class="btn btn-primary btn-sm">View profile</button></span></li>
+        </ul>
+        </div>
+
+        <a class="left carousel-control" href="#prev" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#next" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+        </a>
+    </div>-->
+    <link rel="stylesheet" type="text/css" href="css/invest.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/glyphicons-only-bootstrap/css/bootstrap.min.css">
+
+    <div class="col-md-10 offset-md-1 jumbotron">
+        <div class="row pannel-tittle">
+            <div class="col-md-10 offset-md-1 card">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center">IPO's at a glance</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 my-auto text-center">
+                <span ng-click="prevPage()" class="glyphicon glyphicon-chevron-left"></span>
+            </div>
+            <div class="col-md-8" >
+                <div class="row">
+                    <div class="col-md-3 col card text-center" ng-repeat="x in profiles">
+                        <img class="card-img-top card-image" src="images/buzz.png" alt="Ipo image" />
+                        <div class="card-body">
+                            <h5 class="card-title">{{x.name}}</h5>
+                            <a ng-click="goToProfile(x.name)" class="btn btn-primary align-center">More details</a>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 my-auto text-center">
+                <span ng-click="nextPage()" class="glyphicon glyphicon-chevron-right"></span>
+            </div>
+        </div>  
+    </div>
+</div>
+
